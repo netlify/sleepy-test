@@ -25,7 +25,7 @@
 
     <script>
       function deploy(sleepNumber) {
-        let hookUrl = 'https://api.netlify.com/build_hooks/5f0e39f2915a551c4f55d74a?trigger_branch=sleepy' + sleepNumber
+        let hookUrl = 'https://NETLIFY_API_HOST/build_hooks/BUILD_HOOK_ID?trigger_branch=sleepy' + sleepNumber
         var xhr = new XMLHttpRequest()
         xhr.open('POST', hookUrl)
         xhr.send('{}')
