@@ -2,6 +2,7 @@ if [ -z "$SLEEPY_DURATION" ]; then
   SLEEPY_DURATION="100"
 fi
 
+echo "Sleeping for $SLEEPY_DURATION seconds..."
 sleep $SLEEPY_DURATION
 
 if [ -z "$NETLIFY_API_HOST" ]; then
