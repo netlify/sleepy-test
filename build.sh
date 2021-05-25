@@ -15,6 +15,6 @@ fi
 
 echo "Writing index.html..."
 cat index.html.template | \
-  sed "s/NETLIFY_API_HOST/$NETLIFY_API_HOST/g;s/BUILD_HOOK_ID/$BUILD_HOOK_ID/g" \
+  sed "s#https://NETLIFY_API_HOST/build_hooks/BUILD_HOOK_ID#https://$NETLIFY_API_HOST/build_hooks/$BUILD_HOOK_ID#g" \
   > index.html
 echo "Wrote index.html"
