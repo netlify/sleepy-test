@@ -4,51 +4,6 @@
     <title>This is only a sleepy test.</title>
   </head>
   <body>
-    <p>This is only a test.</p>
-    <p><button onclick="deployAll()">Deploy all sleepies</button></p>
-    <p><button onclick="deploy(0)">Deploy production</button></p>
-    <p><button onclick="deploy(1)">Deploy sleepy1</button></p>
-    <p><button onclick="deploy(2)">Deploy sleepy2</button></p>
-    <p><button onclick="deploy(3)">Deploy sleepy3</button></p>
-    <p><button onclick="deploy(4)">Deploy sleepy4</button></p>
-    <p><button onclick="deploy(5)">Deploy sleepy5</button></p>
-    <p><button onclick="deploy(6)">Deploy sleepy6</button></p>
-    <p><button onclick="deploy(7)">Deploy sleepy7</button></p>
-    <p><button onclick="deploy(8)">Deploy sleepy8</button></p>
-    <p><button onclick="deploy(9)">Deploy sleepy9</button></p>
-    <p><button onclick="deploy(10)">Deploy sleepy10</button></p>
-    <p><button onclick="deploy(11)">Deploy sleepy11</button></p>
-    <p><button onclick="deploy(12)">Deploy sleepy12</button></p>
-    <p><button onclick="deploy(13)">Deploy sleepy13</button></p>
-    <p><button onclick="deploy(14)">Deploy sleepy14</button></p>
-    <p><button onclick="deploy(15)">Deploy sleepy15</button></p>
-
-    <p>Instructions on using this test site</p>
-
-    <p>
-      <ul>
-        <li>Create a site that is linked to this repo.</li>
-        <li>Create a build hook. Copy the ID of the build hook for later use.</li>
-        <li>Set the <code>BUILD_HOOK_ID</code> environment variable to the ID of the build hook from the previous step.</li>
-        <li>If on staging, set the <code>NETLIFY_API_HOST</code> environment variable to the appropriate value.</li>
-        <li>Optionally set the <code>SLEEPY_DURATION</code> environment variable to the number of seconds you wish the build script to sleep.</li>
-      </ul>
-    </p>
-
-    <script>
-      function deploy(sleepNumber) {
-        let hookUrl = 'https://NETLIFY_API_HOST/build_hooks/BUILD_HOOK_ID?trigger_branch=sleepy' + sleepNumber
-        var xhr = new XMLHttpRequest()
-        xhr.open('POST', hookUrl)
-        xhr.send('{}')
-        console.log(`Triggered for sleepy${sleepNumber}`)
-      }
-
-      function deployAll() {
-        for (i = 0 ; i <= 15 ; i++) {
-          deploy(i)
-        }
-      }
-    </script>
+    <p>This is sleepy10.</p>
   </body>
 </html>
