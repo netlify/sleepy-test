@@ -23,6 +23,18 @@
     <p><button onclick="deploy(14)">Deploy sleepy14</button></p>
     <p><button onclick="deploy(15)">Deploy sleepy15</button></p>
 
+    <p>Instructions on using this test site</p>
+
+    <p>
+      <ul>
+        <li>Create a site that is linked to this repo.</li>
+        <li>Create a build hook. Copy the ID of the build hook for later use.</li>
+        <li>Set the BUILD_HOOK_ID environment variable to the ID of the build hook from the previous step.</li>
+        <li>If on staging, set the <code>NETLIFY_API_HOST</code> environment variable to the appropriate value.</li>
+        <li>Optionally set the <code>SLEEPY_DURATION</code> environment variable to the number of seconds you wish the build script to sleep.</li>
+      </ul>
+    </p>
+
     <script>
       function deploy(sleepNumber) {
         let hookUrl = 'https://NETLIFY_API_HOST/build_hooks/BUILD_HOOK_ID?trigger_branch=sleepy' + sleepNumber
