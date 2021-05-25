@@ -13,6 +13,8 @@ if [ -z "$BUILD_HOOK_ID" ]; then
   BUILD_HOOK_ID="NO_BUILD_HOOK_ID_PROVIDED"
 fi
 
+echo "Writing index.html..."
 cat index.html.template | \
-  sed "s/NETLIFY_API_HOST/$NETLIFY_API_HOST/g;s/BUILD_HOOK_ID/$BUILD_HOOK_ID/g" | \
-  tee index.html
+  sed "s/NETLIFY_API_HOST/$NETLIFY_API_HOST/g;s/BUILD_HOOK_ID/$BUILD_HOOK_ID/g" \
+  > index.html
+echo "Wrote index.html"
